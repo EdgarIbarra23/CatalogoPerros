@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog API</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/menuLateral.css">
+</head>
+<body>
+    <header class="header">
+        <input type="checkbox" id="toggle">
+        <div class="container-toggle">
+            <label for="toggle" id="iconToggle">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+        
+        <nav class="nav">
+            <!-- <h1>Razas de Perros</h1> -->
+            <div class="nav__input">
+                <input type="text" placeholder="Buscar...." id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <ul class="nav__links" id="nav__links">
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <section class="container-contenido" id="contenidoAPI">
+        </section>
+    </main>
+    <!-- <footer>Footer</footer> -->
+    <script src="./js/getAPI.js"></script>
+    <script src="./js/funcionalidad.js"></script>
+    <script src="https://kit.fontawesome.com/9bccd79f52.js" crossorigin="anonymous"></script>
+</body>
+</html>
