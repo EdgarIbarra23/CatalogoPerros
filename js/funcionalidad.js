@@ -29,14 +29,23 @@ search.addEventListener("keyup", async (e) => {
     const navLinks = document.getElementById("nav__links");
     navLinks.textContent = '';
 
-    mostrarValores.forEach( keys => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.textContent = keys;
-        a.value = keys;
-        a.id = keys;
-        a.href = '';
-        li.appendChild(a);
-        navLinks.appendChild(li);
-    })
+    if (mostrarValores == ''){
+        getApiDom(urlPerros, createImage);
+    } else {
+        mostrarValores.forEach( keys => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.textContent = keys;
+            a.value = keys;
+            a.id = keys;
+            a.href = '';
+            li.appendChild(a);
+            navLinks.appendChild(li);
+    
+            a.addEventListener("click", async (e) => {
+                e.preventDefault();
+                imagenRaza(e.target.value)
+            });
+        })
+    }
 })
