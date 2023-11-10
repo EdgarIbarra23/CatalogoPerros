@@ -68,12 +68,8 @@ async function imagenRaza(evento) {
     contenido.textContent = '';
 
     try {
-        // const urlDataValor = await getAPI("https://dog.ceo/api/breed/" + valor + "/list");
-        // const urlData = urlDataValor.message;
-        // console.log("Datos de Valores: " + urlData);
-
         const urlImgList = await getAPI("https://dog.ceo/api/breed/"+valor+"/images");
-        const dataUrlImgList = await urlImgList.message.slice(-5);
+        const dataUrlImgList = await urlImgList.message.slice(-20);
 
         dataUrlImgList.forEach((imagen) => {
             imagenData(imagen, valor, contenido)
